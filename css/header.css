@@ -23,7 +23,7 @@ header .color-bar > div {
 }
 
 header .color-bar .purple {
-  background-color: #4100a7;
+  background-color: var(--purple);
 }
 
 header .color-bar .turquoise {
