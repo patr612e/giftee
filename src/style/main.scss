@@ -1,13 +1,12 @@
-@import "components/settings";
-@import "components/header";
-@import "components/footer";
+@import "/components/base/settings";
+@import "/components/base/normalize";
+@import "/components/base/base";
 
-body {
-  font-family: "Helvetica Neue", sans-serif;
-  text-align: center;
-}
+// Components
+@import "/components/header";
+@import "/components/footer";
+@import "/components/buttons";
 
-img {
-  display: block;
-  margin: 50px auto;
+body{
+  background-color: blue !important;
 }
