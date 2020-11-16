@@ -1,1 +1,8 @@
 @import url("/css/footer.css");
+@import url("/css/header.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
