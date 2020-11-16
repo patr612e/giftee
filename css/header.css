@@ -27,23 +27,23 @@ header .color-bar .purple {
 }
 
 header .color-bar .turquoise {
-  background-color: #00c9b8;
+  background-color: var(--turquoise);
 }
 
 header .color-bar .yellow {
-  background-color: #fcd200;
+  background-color: var(--yellow);
 }
 
 header .color-bar .pink {
-  background-color: #ffb3c1;
+  background-color: var(--pink);
 }
 
 header .color-bar .red {
-  background-color: #fe5e54;
+  background-color: var(--red);
 }
 
 header .color-bar .black {
-  background-color: #141414;
+  background-color: var(--black);
 }
 
 header nav ul {
@@ -101,19 +101,19 @@ nav ul li.icons p {
 }
 
 nav ul li.icons a.fa-user {
-  color: #fcd200;
+  color: var(--yellow);
 }
 
 nav ul li.icons a.fa-shopping-cart {
-  color: #4100a7;
+  color: var(--purple);
 }
 
 nav ul li.icons a.fa-heart {
-  color: #ffb3c1;
+  color: var(--pink);
 }
 
 nav ul li.icons a.fa-gift {
-  color: #00c9b8;
+  color: var(--turquoise);
 }
 
 @media screen and (max-width: 767px) {
