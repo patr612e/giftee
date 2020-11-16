@@ -1,0 +1,31 @@
+// COLORS
+$purple: #4100a7;
+$turquoise: #00c9b8;
+$yellow: #fcd200;
+$pink: #ffb3c1;
+$red: #fe5e54;
+$black: #141414;
+
+
+// SPACE
+$small-pad: 10px;
+$medium-pad: 25px;
+$big-pad: 50px;
+
+// BUTTONS
+$button-selector: '.btn' !default;
+$button-padding-vertical: 0.375em !default;
+$button-padding-horizontal: 1em !default;
+$button-bg: #0275d8 !default;
+$button-color: #fff !default;
+$button-border-width: 1px !default;
+$button-border-color: transparent !default;
+$button-border-radius: 0.125em !default;
+$button-hover-bg: darken($button-bg, 10%) !default;
+$button-hover-color: #fff !default;
+$button-hover-border-color: $button-border-color !default;
+$button-active-bg: $button-hover-bg !default;
+$button-active-color: $button-hover-color !default;
+$button-disabled-opacity: 0.65 !default;
+$button-transition: background-color 0.15s ease, color 0.15s ease !default;
+$button-cursor-pointer: true !default;
