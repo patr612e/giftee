@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/5aed494ed7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet" />
-    <title>Product1 Number 1</title>
+    <title>Product Page </title>
   </head>
   <body>
     <header>
@@ -96,8 +96,8 @@
       </div>
     </main>
 
-    <footer>
-      <div id="#contact">
+    <footer class='footer'>
+      <div id="#contact col">
         <h3>Contact</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -155,6 +155,13 @@ function down(min) {
         document.getElementById("myNumber").value = min;
     }
 }
+
+document.querySelectorAll(".product1-wish").forEach(heart => {
+        heart.addEventListener("click", () => {
+          let heartIcon = event.target;
+          heartIcon.classList.toggle("hearted1");
+        });
+      });
     </script>
   </body>
 </html>
