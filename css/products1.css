@@ -1,0 +1,145 @@
+main#products {
+    max-width: 1200px;
+    min-height: 300px;
+    margin: 0 auto;
+    /* background-color: aliceblue; */
+  }
+  
+
+
+ 
+  
+  .show {
+    display: flex !important;
+  }
+  
+
+  /* ##############  */
+  
+
+  
+  .product-grid {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr 1fr;
+    grid-template-rows: auto;
+    gap:1rem;
+  }
+
+
+  
+  .product {
+    /* border: 2px solid black; */
+    width: 100%;
+    font-weight: 200;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s;
+  
+    position: relative;
+  }
+  
+  .product:hover {
+    transform: scale(1.01);
+  }
+  
+  .product img {
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .product-name,
+  .product-price {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .product-wish {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    font-size: 2rem;
+    color: #ffb3c185;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  
+  .product-wish:hover {
+    color: var(--pink);
+  }
+  
+
+  .product-info-container{
+      display: grid;
+      grid-template-rows: 1fr 5fr 1fr 1fr 1fr;
+  }
+
+  .product-info-tittle{
+      text-align: center;
+  }
+
+
+
+
+.product-info-review{
+    display:grid;
+    grid-template-columns: 2.5fr 3fr 1fr;
+    align-items: center;
+}
+
+.product-star i {
+    color: #ffb3c1;
+    font-size: 24px;
+    
+}
+
+.product-info-review span {
+    font-weight: bold;
+}
+
+
+.product-info-quantity{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.product-info-quantity div{
+    text-align: center;
+}
+
+
+
+.dropdown-age {
+    width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 2rem;
+    grid-template-rows: 1fr;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .dropdown-sorting {
+    width: 200px;
+    justify-self: end;
+  }
+  
+  .sort {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .dropdown-age > div,
+  form {
+    padding: 0.5rem 0.3rem;
+  }
+
+  
+  .product-button-add button{
+    margin-top: 1rem;
+    width: 80%
+  }
+
+
+  
