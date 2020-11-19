@@ -1,0 +1,66 @@
+
+#about_wrapper {
+
+    background: white;
+    margin-top: 5vh;
+}
+
+#about_wrapper h3 {
+    text-align: left;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    padding-bottom: 2vh;
+}
+
+#about_wrapper span {
+        font-weight: bold;
+}
+
+#about_wrapper h2 {
+    text-align: left;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 15vh;
+    margin-top: 10vh;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+#about_wrapper p {
+    text-align: left;
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+#about_top{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    gap: 2vw;
+}
+
+#about_top img{
+  width: 15vw;
+}
+
+
+#about_bottom{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 10vh;
+    margin-bottom: 18vh;
+    gap: 2vw;
+}
+
+#about_bottom img{
+    width: 11vw;
+  }

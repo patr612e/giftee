@@ -11,7 +11,7 @@
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding-bottom: 2vh;
     width: 100%;          /* Footer height */
