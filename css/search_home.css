@@ -1,0 +1,12 @@
+#content{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.search-bar{
+    margin-top: 10%;
+}
+.search-tags{
+text-align: center;
+}

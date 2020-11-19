@@ -20,7 +20,7 @@ button{
     display: inline-block;
     vertical-align: middle;
     padding: var(--button-padding-vertical) var(--button-padding-horizontal);
-    margin: var(--button-margin-left) var(--button-margin-top) var(--button-margin-ri) var(--button-margin-bottom);
+    margin: var(--button-margin-left);
     transition: var(--button-transition);
     text-align: center;
     text-decoration: none;
