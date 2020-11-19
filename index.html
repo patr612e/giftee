@@ -47,10 +47,12 @@
     </header>
 
     <section id="content">
+      <div id="search-container">
 <div class="search-bar">
-    <form action="">
-      <input type="search" placeholder="Search for something ...">
-    </form>
+  <form name="search">
+    <input type="text" class="search-input" autocorrect="off" autocomplete="off" />
+    <div class="search-label hidden"></div>
+  </form>
   </div>
   <div class="search-tags">
     <button>something</button>
@@ -65,6 +67,7 @@
     <button>something</button>
     <button>something</button>
   </div>
+</div>
 
     </section>
 
@@ -84,7 +87,7 @@
       </div>
 
       <div id="#about">
-        <h3>About us</h3>
+        <h3>FAQ</h3>
         <div class="color-bar">
           <div class="purple"></div>
           <div class="turquoise"></div>
@@ -94,7 +97,6 @@
         </div>
         <p>How does it work?</p>
         <p>Delivery information</p>
-        <p>FAQs</p>
         <p>Privacy and Policy</p>
       </div>
 
@@ -114,5 +116,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
