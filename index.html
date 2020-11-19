@@ -23,49 +23,56 @@
       </div>
       <nav>
         <ul>
-          <li class="logo"><a href="#">Giftee</a></li>
+          <li class="logo"><a href="index.html">Giftee</a></li>
           <li class="icons">
-            <div>
-              <a href="#" class="fas fa-user"></a>
+            <a href="#">
+              <i class="fas fa-user"></i>
               <p>sign in</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-shopping-cart"></a>
+            </a>
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
               <p>cart</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-heart"></a>
+            </a>
+            <a href="#">
+              <i class="fas fa-heart"></i>
               <p>wishlist</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-gift"></a>
+            </a>
+            <a href="index.html">
+              <i class="fas fa-gift"></i>
               <p>gift finder</p>
-            </div>
+            </a>
+            <a href="about.html">
+              <i class="fas fa-info-circle"></i>
+              <p>about</p>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
 
     <section id="content">
-<div class="search-bar">
-    <form action="">
-      <input type="search" placeholder="Search for something ...">
-    </form>
-  </div>
-  <div class="search-tags">
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-    <button>something</button>
-  </div>
-
+      <div id="search-container">
+        <div class="search-bar">
+          <form name="search">
+            <div id="search-input-tags"></div>
+            <input type="text" class="search-input" autocorrect="off" autocomplete="off" />
+            <div class="search-label hidden"></div>
+          </form>
+        </div>
+        <div class="search-tags">
+          <button onclick="addTagsToSearch()">something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+          <button>something</button>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -84,7 +91,7 @@
       </div>
 
       <div id="#about">
-        <h3>About us</h3>
+        <h3>FAQ</h3>
         <div class="color-bar">
           <div class="purple"></div>
           <div class="turquoise"></div>
@@ -94,7 +101,6 @@
         </div>
         <p>How does it work?</p>
         <p>Delivery information</p>
-        <p>FAQs</p>
         <p>Privacy and Policy</p>
       </div>
 
@@ -114,5 +120,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

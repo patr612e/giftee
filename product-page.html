@@ -22,24 +22,28 @@
       </div>
       <nav>
         <ul>
-          <li class="logo"><a href="#">Giftee</a></li>
+          <li class="logo"><a href="index.html">Giftee</a></li>
           <li class="icons">
-            <div>
-              <a href="#" class="fas fa-user"></a>
+            <a href="#">
+              <i class="fas fa-user"></i>
               <p>sign in</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-shopping-cart"></a>
+            </a>
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
               <p>cart</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-heart"></a>
+            </a>
+            <a href="#">
+              <i class="fas fa-heart"></i>
               <p>wishlist</p>
-            </div>
-            <div>
-              <a href="#" class="fas fa-gift"></a>
+            </a>
+            <a href="index.html">
+              <i class="fas fa-gift"></i>
               <p>gift finder</p>
-            </div>
+            </a>
+            <a href="about.html">
+              <i class="fas fa-info-circle"></i>
+              <p>about</p>
+            </a>
           </li>
         </ul>
       </nav>
@@ -63,18 +67,20 @@
             <label> <input type="checkbox" /> 60 +</label>
           </form>
         </div>
-        <div class="range-slider">
-          <div class="multi-range-slider">
-            <input type="range" id="input-left" min="0" max="100" value="25" />
-            <input type="range" id="input-right" min="0" max="100" value="75" />
+        <div class="range-slider-container">
+          <div class="range-slider">
+            <div class="multi-range-slider">
+              <input type="range" id="input-left" min="0" max="100" value="25" />
+              <input type="range" id="input-right" min="0" max="100" value="75" />
 
-            <div class="slider">
-              <div class="track"></div>
-              <div class="range"></div>
-              <div class="thumb left"></div>
-              <div class="thumb right"></div>
-              <div class="value-left"></div>
-              <div class="value-right"></div>
+              <div class="slider">
+                <div class="track"></div>
+                <div class="range"></div>
+                <div class="thumb left"></div>
+                <div class="thumb right"></div>
+                <div class="value-left"></div>
+                <div class="value-right"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -160,6 +166,52 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div id="#contact">
+        <h3>Contact</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <p>Lygten 37 - 2400 - KBH NV</p>
+        <p>+45 53535353</p>
+        <p>customerservice@giftee.com</p>
+      </div>
+
+      <div id="#about">
+        <h3>About us</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <p>How does it work?</p>
+        <p>Delivery information</p>
+        <p>FAQs</p>
+        <p>Privacy and Policy</p>
+      </div>
+
+      <div id="#follow">
+        <h3>Follow us:</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <div class="icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+        </div>
+      </div>
+    </footer>
     <script>
       const ageDropdown = document.querySelector(".dropdown-age");
       const ageFilters = document.querySelector(".form-age-checkboxes");
@@ -181,11 +233,7 @@
         let sortedBy = document.querySelector(".sort");
         let clicked = event.target.innerText;
 
-        if (clicked.length < 20) {
-          console.log(clicked);
-        }
-
-        if (clicked !== undefined || clicked.length < 20) {
+        if (clicked !== undefined && clicked.length < 25) {
           sortedBy.textContent = clicked;
         }
       });
@@ -195,7 +243,6 @@
       document.querySelectorAll(".product-wish").forEach(heart => {
         heart.addEventListener("click", () => {
           let heartIcon = event.target;
-          console.log(heart);
           heartIcon.classList.toggle("hearted");
         });
       });
