@@ -10,3 +10,28 @@
 .search-tags{
 text-align: center;
 }
+
+.search-tags button:nth-child(odd) {
+    --button-bg: var(--purple);
+}
+.search-tags button:nth-child(even) {
+    --button-bg: var(--turquoise);
+}
+.search-tags button:nth-child(3n) {
+    --button-bg: var(--red);
+}
+.search-tags button:nth-child(4n) {
+    --button-bg: var(--yellow);
+}
+.search-tags button:nth-child(5n) {
+    --button-bg: var(--turquoise);
+    }
+.search-tags button:nth-child(6n) {
+    --button-bg: var(--red);
+}
+.search-tags button:nth-child(7n) {
+    --button-bg: var(--turquoise);
+}
+.search-tags button:nth-child(8n) {
+    --button-bg: var(--purple);
+}
