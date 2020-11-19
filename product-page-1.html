@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/5aed494ed7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet" />
-    <title>Products</title>
+    <title>Product Number 1</title>
   </head>
   <body>
     <header>
@@ -47,7 +47,7 @@
     <main id="products">
      
       <div class="product-grid">
-        <div></div>
+        <div ></div>
         <div class="product">
 
           <i class="fas product-wish fa-heart"></i>
@@ -72,115 +72,84 @@
                 <div></div>
             </div>
             <div class='product-info-quantity'> 
-                <div> Quantity </div>
-                <div class="dropdown-age">
-                    <div class="age">0</div>
-          
-                    <svg class="dropdown-age-arrow" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                    </svg>
-          
-                    <form class="form-age-checkboxes">
-                      <label> <input type="checkbox" />1 </label>
-                      <label> <input type="checkbox" /> 2 </label>
-                      <label> <input type="checkbox" /> 3 </label>
-                      <label> <input type="checkbox" /> 4 </label>
-                      <label> <input type="checkbox" /> 5 </label>
-                      <label> <input type="checkbox" /> 6 </label>
-                      <label> <input type="checkbox" /> 7</label>
-                      <label> <input type="checkbox" /> 8</label>
-                      <label> <input type="checkbox" /> 9</label>
-                    </form>
-                  </div>
-
-
+                    <div> Quantity: </div>
+                        <div class="input-group">
+                          <div class="input-group-btn">
+                              <button id="down" class="btn btn-default" onclick=" down('0')"><i class="fas fa-minus"></i></button>
+                          </div>
+                          <div> <input type="text"  id="myNumber"  value="1" /></div>
+                          <div class="input-group-btn">
+                              <button id="up" class="btn btn-default" onclick="up('10')"><i class="fas fa-plus"></i></button>
+                          </div>
+                      </div>
+                      
             </div>
             <div class='product-button-add'> <Button> Add to Cart</Button></div>
 
         </div>
-     
+        <div></div>
       </div>
     </main>
+
+    <footer>
+      <div id="#contact">
+        <h3>Contact</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <p>Lygten 37 - 2400 - KBH NV</p>
+        <p>+45 53535353</p>
+        <p>customerservice@giftee.com</p>
+      </div>
+
+      <div id="#about">
+        <h3>About us</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <p>How does it work?</p>
+        <p>Delivery information</p>
+        <p>FAQs</p>
+        <p>Privacy and Policy</p>
+      </div>
+
+      <div id="#follow">
+        <h3>Follow us:</h3>
+        <div class="color-bar">
+          <div class="purple"></div>
+          <div class="turquoise"></div>
+          <div class="yellow"></div>
+          <div class="pink"></div>
+          <div class="red"></div>
+        </div>
+        <div class="icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+        </div>
+      </div>
+    </footer>
     <script>
-      const ageDropdown = document.querySelector(".dropdown-age");
-      const ageFilters = document.querySelector(".form-age-checkboxes");
-      const ageArrow = document.querySelector(".dropdown-age-arrow");
-
-      ageDropdown.addEventListener("click", () => {
-        ageFilters.classList.toggle("show");
-        ageArrow.classList.toggle("rotate");
-      });
-
-      const sortDropdown = document.querySelector(".dropdown-sorting");
-      const sortSelections = document.querySelector(".sorting-selections");
-      const sortArrow = document.querySelector(".dropdown-sort-arrow");
-
-      sortDropdown.addEventListener("click", () => {
-        sortSelections.classList.toggle("show");
-        sortArrow.classList.toggle("rotate");
-
-        let sortedBy = document.querySelector(".sort");
-        let clicked = event.target.innerText;
-
-        if (clicked.length < 20) {
-          console.log(clicked);
-        }
-
-        if (clicked !== undefined || clicked.length < 20) {
-          sortedBy.textContent = clicked;
-        }
-      });
-
-      // console.log(event.target);
-
-      // slider
-      // https://codepen.io/MinzCode/pen/MWKgyqb
-
-      var inputLeft = document.getElementById("input-left");
-      var inputRight = document.getElementById("input-right");
-
-      var thumbLeft = document.querySelector(".slider > .thumb.left");
-      var thumbRight = document.querySelector(".slider > .thumb.right");
-      var thumbLeftValue = document.querySelector(".slider > .value-left");
-      var thumbRightValue = document.querySelector(".slider > .value-right");
-      var range = document.querySelector(".slider > .range");
-
-      function setLeftValue() {
-        var _this = inputLeft,
-          min = parseInt(_this.min),
-          max = parseInt(_this.max);
-
-        _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
-
-        var percent = ((_this.value - min) / (max - min)) * 100;
-        var price = Math.trunc(((_this.value - min) / (max - min)) * 100);
-
-        thumbLeft.style.left = percent + "%";
-        range.style.left = percent + "%";
-        thumbLeftValue.style.left = percent - 10 + "%";
-        thumbLeftValue.innerText = "$ " + price;
-      }
-      setLeftValue();
-
-      function setRightValue() {
-        var _this = inputRight,
-          min = parseInt(_this.min),
-          max = parseInt(_this.max);
-
-        _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
-
-        var percent = ((_this.value - min) / (max - min)) * 100;
-        var price = Math.trunc(((_this.value - max) / (min - max)) * 100);
-
-        thumbRight.style.right = 100 - percent + "%";
-        range.style.right = 100 - percent + "%";
-        thumbRightValue.style.right = 90 - percent + "%";
-        thumbRightValue.innerText = "$ " + (100 - price);
-      }
-      setRightValue();
-
-      inputLeft.addEventListener("input", setLeftValue);
-      inputRight.addEventListener("input", setRightValue);
+    function up(max) {
+    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
+    if (document.getElementById("myNumber").value >= parseInt(max)) {
+        document.getElementById("myNumber").value = max;
+    }
+}
+function down(min) {
+    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
+    if (document.getElementById("myNumber").value <= parseInt(min)) {
+        document.getElementById("myNumber").value = min;
+    }
+}
     </script>
   </body>
 </html>
