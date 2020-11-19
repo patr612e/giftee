@@ -16,101 +16,106 @@ footer {
     padding-bottom: 2vh;
     width: 100%;          /* Footer height */
     background: white;
-text-align: center  ;}
-
-
-footer h3, p, .icon {
     text-align: center;
-    padding-bottom: .5vh;
+}
 
+html,
+body {
+  height: 100%;
+}
+
+
+footer h3,
+p,
+.icon {
+  text-align: center;
+  padding-bottom: 0.5vh;
 }
 
 footer h3 {
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: default;
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: default;
 }
 
-
 footer p {
-    font-family: sans-serif;   
-    font-weight: bold;
-    cursor: pointer
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 footer p:hover {
-    font-family: sans-serif;   
-    font-weight: bold;
-    cursor: pointer;
-    color: rgb(46, 46, 46);
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(46, 46, 46);
 }
 
 footer .color-bar {
-    width: 40%;  
-    position: relative;
-    left:10vw;
-    right:10vw;
-    padding: .9vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  
-  footer .color-bar > div {
-    width: 100%;
-    height: 0.3rem;
-  }
-  
-  footer .color-bar .purple {
-    background-color: #4100a7;
-  }
-  
-  footer .color-bar .turquoise {
-    background-color: #00c9b8;
-  }
-  
-  footer .color-bar .yellow {
-    background-color: #fcd200;
-  }
-  
-  footer .color-bar .pink {
-    background-color: #ffb3c1;
-  }
-  
-  footer .color-bar .red {
-    background-color: #fe5e54;
-  }
-
-  footer i {
-      font-size: 3rem;
-      cursor: pointer;
-  }
-
-  footer i:hover {
-    font-size: 3rem;
-    cursor: pointer;
-    
+  width: 40%;
+  position: relative;
+  left: 10vw;
+  right: 10vw;
+  padding: 0.9vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-  footer .fa-instagram{
-    color: #C13584;
-  }
+footer .color-bar > div {
+  width: 100%;
+  height: 0.3rem;
+}
 
-  footer .fa-instagram:hover{
-    color: #922965;
-  }
+footer .color-bar .purple {
+  background-color: var(--purple);
+}
 
-  footer .fa-facebook-square{
-    color: #3b5998;
-  }
+footer .color-bar .turquoise {
+  background-color: var(--turquoise);
+}
 
-  footer .fa-facebook-square:hover{
-    color: #283e6e;
-  }
+footer .color-bar .yellow {
+  background-color: var(--yellow);
+}
 
-  footer .fa-twitter-square {
-    color: #1DA1F2;
-  }
+footer .color-bar .pink {
+  background-color: var(--pink);
+}
 
-  footer .fa-twitter-square:hover {
-    color: #167bb9;
-  }
+footer .color-bar .red {
+  background-color: var(--red);
+}
+
+footer i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+footer i:hover {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+footer .fa-instagram {
+  color: #c13584;
+}
+
+footer .fa-instagram:hover {
+  color: #922965;
+}
+
+footer .fa-facebook-square {
+  color: #3b5998;
+}
+
+footer .fa-facebook-square:hover {
+  color: #283e6e;
+}
+
+footer .fa-twitter-square {
+  color: #1da1f2;
+}
+
+footer .fa-twitter-square:hover {
+  color: #167bb9;
+}
