@@ -190,7 +190,15 @@
         }
       });
 
-      // console.log(event.target);
+      // heart
+
+      document.querySelectorAll(".product-wish").forEach(heart => {
+        heart.addEventListener("click", () => {
+          let heartIcon = event.target;
+          console.log(heart);
+          heartIcon.classList.toggle("hearted");
+        });
+      });
 
       // slider
       // https://codepen.io/MinzCode/pen/MWKgyqb

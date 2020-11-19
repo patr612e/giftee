@@ -196,11 +196,23 @@ input[type="range"]::-webkit-slider-thumb {
   right: -1rem;
   top: -1rem;
   font-size: 2rem;
-  color: #ffb3c185;
+
   cursor: pointer;
   transition: 0.1s;
+
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--black);
 }
 
-.product-wish:hover {
+/* .product-wish:hover {
   color: var(--pink);
+} */
+
+.hearted {
+  color: var(--pink);
+  -webkit-text-fill-color: unset; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: unset;
+  -webkit-text-stroke-color: unset;
 }
