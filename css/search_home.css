@@ -24,6 +24,11 @@ text-align: center;
     color: var(--purple);
 }
 
+#search-input-tags{
+    position: absolute;
+    top: -10px;
+}
+
 .hidden{
     display: none;
 }
