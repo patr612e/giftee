@@ -6,10 +6,29 @@
 
 #search-container{
     position: relative;
+    margin-bottom: 17%;
+}
+#search-container form{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+#search-container i{
+    position: absolute;
+    font-size: 1.6rem;
+    right: 5px;
+    top: 10px;
+    color: var(--purple);
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+#search-container i:hover{
+    color: var(--turquoise);
+    transform: scale(1.2);
 }
 
+
 .search-bar{
-    margin-top: 10%;
+    margin-top: 13%;
 }
 .search-tags{
 text-align: center;
@@ -26,7 +45,7 @@ text-align: center;
 
 #search-input-tags{
     position: absolute;
-    top: -10px;
+    top: -15px;
 }
 
 .hidden{
