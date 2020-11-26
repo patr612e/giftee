@@ -8,6 +8,8 @@ $black: #141414; */
 header {
   width: 100%;
   height: auto;
+  z-index: 99999;
+  position: relative;
 }
 
 header .color-bar {

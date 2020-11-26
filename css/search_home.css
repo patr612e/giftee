@@ -4,9 +4,18 @@
     margin: auto;
 }
 
+.full-height{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    max-width: 1024px;
+    margin: auto;
+    display: grid;
+    align-content: center;
+}
+
 #search-container{
     position: relative;
-    margin-bottom: 17%;
 }
 #search-container form{
     font-size: 1.3rem;
@@ -27,9 +36,6 @@
 }
 
 
-.search-bar{
-    margin-top: 13%;
-}
 .search-tags{
 text-align: center;
 }
