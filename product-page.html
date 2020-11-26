@@ -186,21 +186,6 @@
         }
       });
 
-      // heart
-
-      document.querySelectorAll(".product-wish").forEach(heart => {
-        heart.addEventListener("click", () => {
-          let heartIcon = event.target;
-          heartIcon.classList.toggle("hearted");
-
-          // let wishlistIcon = document.querySelector("nav .fa-heart");
-          // wishlistIcon.getBoundingClientRect();
-          // heartIcon.getBoundingClientRect();
-
-          // heartIcon.style.transform = `translate(${wishlistIcon.x - heartIcon.x}px, ${wishlistIcon.y - heartIcon.y})`;
-        });
-      });
-
       // slider
       // https://codepen.io/MinzCode/pen/MWKgyqb
 
@@ -250,26 +235,42 @@
       inputLeft.addEventListener("input", setLeftValue);
       inputRight.addEventListener("input", setRightValue);
 
-// The products from json
-async function getProducts() {
-     let myJson = await fetch("products.json");
-     aProducts = await myJson.json();
+      // The products from json
+      async function getProducts() {
+        let myJson = await fetch("products.json");
+        aProducts = await myJson.json();
 
-     let temp = document.querySelector("[data-template]");
-     let dest = document.querySelector('.products-grid');
-     aProducts.forEach(product => {
-            let clone = temp.cloneNode(true).content;
-             clone.querySelector('[data-product="image"]').src = product.image;
-             clone.querySelector('[data-product="title"]').textContent = product.title;
-             clone.querySelector('[data-product="price"]').textContent = product.price + " DKK";
-             for (i = 0; i < product.rating; i++) {
-              clone.querySelector('[data-product="rating"]').insertAdjacentHTML("afterbegin", '<i class="fas fa-star"></i>');
-              }
-             dest.appendChild(clone);
-     })
- }
+        let temp = document.querySelector("[data-template]");
+        let dest = document.querySelector(".products-grid");
+        aProducts.forEach(product => {
+          let clone = temp.cloneNode(true).content;
+          clone.querySelector('[data-product="image"]').src = product.image;
+          clone.querySelector('[data-product="title"]').textContent = product.title;
+          clone.querySelector('[data-product="price"]').textContent = product.price + " DKK";
+          for (i = 0; i < product.rating; i++) {
+            clone.querySelector('[data-product="rating"]').insertAdjacentHTML("afterbegin", '<i class="fas fa-star"></i>');
+          }
+          dest.appendChild(clone);
+        });
 
- getProducts();
+        // heart
+
+        document.querySelectorAll(".product-wish").forEach(heart => {
+          heart.addEventListener("click", () => {
+            let heartIcon = event.target;
+            heartIcon.classList.toggle("hearted");
+            console.log(heartIcon);
+
+            // let wishlistIcon = document.querySelector("nav .fa-heart");
+            // wishlistIcon.getBoundingClientRect();
+            // heartIcon.getBoundingClientRect();
+
+            // heartIcon.style.transform = `translate(${wishlistIcon.x - heartIcon.x}px, ${wishlistIcon.y - heartIcon.y})`;
+          });
+        });
+      }
+
+      getProducts();
     </script>
   </body>
 </html>
