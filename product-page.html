@@ -262,6 +262,9 @@ async function getProducts() {
              clone.querySelector('[data-product="image"]').src = product.image;
              clone.querySelector('[data-product="title"]').textContent = product.title;
              clone.querySelector('[data-product="price"]').textContent = product.price + " DKK";
+             for (i = 0; i < product.rating; i++) {
+              clone.querySelector('[data-product="rating"]').insertAdjacentHTML("afterbegin", '<i class="fas fa-star"></i>');
+              }
              dest.appendChild(clone);
      })
  }
