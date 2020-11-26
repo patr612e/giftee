@@ -101,73 +101,21 @@
         </div>
       </div>
       <div class="products-grid">
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
-        <div class="product" onclick="location.href='/product-page-1.html';">
-          <i class="fas product-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product_image" />
-          <div class="product-name">Reclaimed Wood USA Wall Art</div>
-          <div class="product-price">250 DKK</div>
-          <div class="rating"></div>
-        </div>
+        <template data-template="product">
+          <div class="product">
+            <i class="fas product-wish fa-heart"></i>
+            <div class="product-info" onclick="location.href='/product-page-1.html';">
+              <img data-product="image" src="" alt="product_image" />
+              <div data-product="title" class="product-name"></div>
+              <div data-product="price" class="product-price"></div>
+              <div data-product="rating" class="rating"></div>
+            </div>
+          </div>
+        </template>
       </div>
     </main>
     <footer>
-      <div id="#contact">
+      <div id="contact">
         <h3>Contact</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -181,7 +129,7 @@
         <p>customerservice@giftee.com</p>
       </div>
 
-      <div id="#about">
+      <div id="about">
         <h3>About us</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -196,7 +144,7 @@
         <p>Privacy and Policy</p>
       </div>
 
-      <div id="#follow">
+      <div id="follow">
         <h3>Follow us:</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -244,6 +192,12 @@
         heart.addEventListener("click", () => {
           let heartIcon = event.target;
           heartIcon.classList.toggle("hearted");
+
+          // let wishlistIcon = document.querySelector("nav .fa-heart");
+          // wishlistIcon.getBoundingClientRect();
+          // heartIcon.getBoundingClientRect();
+
+          // heartIcon.style.transform = `translate(${wishlistIcon.x - heartIcon.x}px, ${wishlistIcon.y - heartIcon.y})`;
         });
       });
 
@@ -295,6 +249,24 @@
 
       inputLeft.addEventListener("input", setLeftValue);
       inputRight.addEventListener("input", setRightValue);
+
+// The products from json
+async function getProducts() {
+     let myJson = await fetch("products.json");
+     aProducts = await myJson.json();
+
+     let temp = document.querySelector("[data-template]");
+     let dest = document.querySelector('.products-grid');
+     aProducts.forEach(product => {
+            let clone = temp.cloneNode(true).content;
+             clone.querySelector('[data-product="image"]').src = product.image;
+             clone.querySelector('[data-product="title"]').textContent = product.title;
+             clone.querySelector('[data-product="price"]').textContent = product.price + " DKK";
+             dest.appendChild(clone);
+     })
+ }
+
+ getProducts();
     </script>
   </body>
 </html>

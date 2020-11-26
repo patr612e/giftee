@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/5aed494ed7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet" />
-    <title>Product Page </title>
+    <title>Product Page</title>
   </head>
   <body>
     <header>
@@ -50,7 +50,7 @@
     </header>
     <main id="product1s">
       <div class="product1-grid">
-        <div ></div>
+        <div></div>
         <div class="product1">
           <i class="fas product1-wish fa-heart"></i>
           <img src="https://source.unsplash.com/random" alt="product1_image" />
@@ -61,8 +61,8 @@
         <div></div>
         <div class="product1-info-container">
           <div class="product1-info-tittle"><h1>Product1 Name</h1></div>
-          <div class="product1-info-description">a
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos soluta perspiciatis officia quia sit
+          <div class="product1-info-description">
+            a Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos soluta perspiciatis officia quia sit
             corrupti Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci nisi nemo sequi quaerat fugiat debitis
             labore aut amet Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur deleniti recusandae voluptatem,
             accusamus, ipsam at odit expedita provident quasi vero adipisci itaque corrupti voluptas numquam ad cupiditate minima.
@@ -77,18 +77,17 @@
             </div>
             <span> (23 Reviews)</span>
           </div>
-          <div class='product1-info-quantity'> 
-            <div> Quantity: </div>
-                <div class="input-group">
-                  <div class="input-group-btn">
-                      <button id="down" class="btn btn-default" onclick=" down('0')"><i class="fas fa-minus"></i></button>
-                  </div>
-                  <div> <input type="text"  id="myNumber"  value="1" /></div>
-                  <div class="input-group-btn">
-                      <button id="up" class="btn btn-default" onclick="up('10')"><i class="fas fa-plus"></i></button>
-                  </div>
+          <div class="product1-info-quantity">
+            <div>Quantity:</div>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button id="down" class="btn btn-default" onclick=" down('0')"><i class="fas fa-minus"></i></button>
               </div>
-              
+              <div><input type="text" id="myNumber" value="1" /></div>
+              <div class="input-group-btn">
+                <button id="up" class="btn btn-default" onclick="up('10')"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
           </div>
           <div class="product1-button-add"><button>Add to Cart</button></div>
         </div>
@@ -96,8 +95,8 @@
       </div>
     </main>
 
-    <footer class='footer'>
-      <div id="#contact col">
+    <footer class="footer">
+      <div id="contact col">
         <h3>Contact</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -111,7 +110,7 @@
         <p>customerservice@giftee.com</p>
       </div>
 
-      <div id="#about">
+      <div id="about">
         <h3>About us</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -126,7 +125,7 @@
         <p>Privacy and Policy</p>
       </div>
 
-      <div id="#follow">
+      <div id="follow">
         <h3>Follow us:</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -143,20 +142,20 @@
       </div>
     </footer>
     <script>
-    function up(max) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
-    if (document.getElementById("myNumber").value >= parseInt(max)) {
-        document.getElementById("myNumber").value = max;
-    }
-}
-function down(min) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
-    if (document.getElementById("myNumber").value <= parseInt(min)) {
-        document.getElementById("myNumber").value = min;
-    }
-}
+      function up(max) {
+        document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
+        if (document.getElementById("myNumber").value >= parseInt(max)) {
+          document.getElementById("myNumber").value = max;
+        }
+      }
+      function down(min) {
+        document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
+        if (document.getElementById("myNumber").value <= parseInt(min)) {
+          document.getElementById("myNumber").value = min;
+        }
+      }
 
-document.querySelectorAll(".product1-wish").forEach(heart => {
+      document.querySelectorAll(".product1-wish").forEach(heart => {
         heart.addEventListener("click", () => {
           let heartIcon = event.target;
           heartIcon.classList.toggle("hearted1");
