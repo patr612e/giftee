@@ -49,33 +49,16 @@
         </ul>
       </nav>
     </header>
-    <main id="cart">
-      <div class="products-container">
+    <main id='cart'>
+        <div class="products-container">
         <div class="products-resume">
-          <div class="product-1-row">
-            <span>Product</span>
-            <span></span>
-            <span>Price</span>
-            <span>Quantity</span>
-            <span>Total</span>
-            <span></span>
-          </div>
-          <div class="product-2-row">
-            <div><img src="https://source.unsplash.com/random" alt="product_image" /></div>
-            <div>Product Name 1</div>
-            <div>20 DKK</div>
-            <div>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-              </select>
+            <div class="product-1-row">
+                <span>Product</span>
+                <span></span>
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
+                <span></span>
             </div>
             <div class="product-2-row">
                 <div> <img src="https://source.unsplash.com/random" alt="product_image" /></div>
@@ -85,7 +68,7 @@
                   <span> DKK</span>
                 </div>
                 <div> 
-                <select onchange="getFinalPrice();" id="quantity" name="quantity">
+                <select onchange="getFinalPrice(event.target);" id="quantity" name="quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -123,51 +106,54 @@
                   <option value="9">9</option>
               </select> </div>
               <div class='priceContainer'> 
-                <span id=finalPrice> </span>
+                <span id=finalPrice>  </span>
                 <span>DKK</span>
                 </div>
               <div> <i class="fa fa-trash" aria-hidden="true"></i>
               </div>
             </div>
-            <div>20 DKK</div>
-            <div><i class="fa fa-trash" aria-hidden="true"></i></div>
-          </div>
         </div>
         <div class="product-checkout">
-          <div>
-            <div class="coupon-title">Coupon Apply</div>
-            <div id="input-container" class="input-container">
-              <div><input type="text" /></div>
-              <i class="fas fa-angle-double-right"></i>
-            </div>
-          </div>
-          <div class="product-basket">
-            <div class="basket-title">
-              <h4>Basket Totals</h4>
-              <div></div>
-            </div>
-            <div class="basket-item">
-              <div>Subtotal</div>
-              <div><b>40 DKK</b></div>
-            </div>
-            <div class="basket-item">
-              <div>Shipping</div>
-              <div><a href="#"> Calculate </a></div>
-            </div>
-            <div class="basket-item">
-              <div>Total</div>
-              <div><b>40 DKK</b></div>
-            </div>
-          </div>
-          <div class="checkout-button">
-            <button><i class="fas fa-shopping-cart"></i> Proceed to checkout</button>
-          </div>
-        </div>
-      </div>
-    </main>
+            <div> 
+                <div class='coupon-title'>  Coupon Apply</div>
+                <div id='input-container' class='input-container'> 
+                  <div><input type="text" ></div>
+                  <i class="fas fa-angle-double-right"></i> 
+                </div>
+                
 
+
+            </div>
+            <div class='product-basket'> 
+                <div class="basket-title">
+                  <h4>Basket Totals</h4>
+                  <div></div>
+                 </div>
+                 <div class="basket-item">
+                    <div>Subtotal</div>
+                    <div><b>40 DKK</b> </div>
+                  </div>
+                      <div class="basket-item">
+                        <div>Shipping</div>
+                        <div><a href="#"> Calculate </a> 
+                        </div>
+                      </div>
+                    <div class="basket-item"> 
+                      <div>Total</div>
+                    <div><b>40 DKK</b> </div>
+                  </div>
+            </div>
+            <div class='checkout-button'><button> <i class="fas fa-shopping-cart"></i>
+              Proceed to checkout</button> </div>
+        </div>
+        
+        </div>
+        
+        
+    </main>
+  
     <footer>
-      <div id="contact">
+      <div id="#contact">
         <h3>Contact</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -181,7 +167,7 @@
         <p>customerservice@giftee.com</p>
       </div>
 
-      <div id="about">
+      <div id="#about">
         <h3>FAQ</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -195,7 +181,7 @@
         <p>Privacy and Policy</p>
       </div>
 
-      <div id="follow">
+      <div id="#follow">
         <h3>Follow us:</h3>
         <div class="color-bar">
           <div class="purple"></div>
@@ -227,12 +213,12 @@
 
      const input = document.getElementById('input-container');
 
-      input.addEventListener("focusin", event => {
-        input.style.border = "1px solid #4100A7";
+      input.addEventListener('focusin', (event) => {
+        input.style.border = '1px solid #4100A7';    
       });
 
-      input.addEventListener("focusout", event => {
-        input.style.border = "none";
+      input.addEventListener('focusout', (event) => {
+        input.style.border = 'none';    
       });
     </script>
   </body>
