@@ -56,11 +56,20 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
 }
 
 main {
   max-width: 1200px;
   min-height: 300px;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  font-weight: 500;
 }
