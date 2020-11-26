@@ -3,48 +3,42 @@
         "title":"Reclaimed Wood USA Wall Art",
         "image": "https://source.unsplash.com/random",
         "price":"295",
-        "rating":2
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        "title":"Reclaimed Wood USA Wall Art",
+        "image": "https://source.unsplash.com/random",
+        "price":"300",
+        "rating":4,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "title":"Reclaimed Wood USA Wall Art",
         "image": "https://source.unsplash.com/random",
         "price":"295",
-        "rating":4
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "title":"Reclaimed Wood USA Wall Art",
         "image": "https://source.unsplash.com/random",
         "price":"295",
-        "rating":5
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "title":"Reclaimed Wood USA Wall Art",
         "image": "https://source.unsplash.com/random",
         "price":"295",
-        "rating":5
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "title":"Reclaimed Wood USA Wall Art",
         "image": "https://source.unsplash.com/random",
         "price":"295",
-        "rating":5
-    },
-    {
-        "title":"Reclaimed Wood USA Wall Art",
-        "image": "https://source.unsplash.com/random",
-        "price":"295",
-        "rating":5
-    },
-    {
-        "title":"Reclaimed Wood USA Wall Art",
-        "image": "https://source.unsplash.com/random",
-        "price":"295",
-        "rating":5
-    },
-    {
-        "title":"Reclaimed Wood USA Wall Art",
-        "image": "https://source.unsplash.com/random",
-        "price":"295",
-        "rating":5
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
 ]

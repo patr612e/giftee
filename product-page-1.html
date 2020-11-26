@@ -49,31 +49,21 @@
       </nav>
     </header>
     <main id="product1s">
+      <template data-template="product">
       <div class="product1-grid">
         <div></div>
         <div class="product1">
           <i class="fas product1-wish fa-heart"></i>
-          <img src="https://source.unsplash.com/random" alt="product1_image" />
-          <div class="product1-name"><h3>Reclaimed Wood USA Wall Art</h3></div>
-          <div class="product1-price">250 DKK</div>
-          <div class="rating"></div>
+          <img data-product="image" src="" alt="product1_image" />
+          <div class="product1-name"><h3 data-product="title"></h3></div>
+          <div data-product="price" class="product1-price"></div>
         </div>
         <div></div>
         <div class="product1-info-container">
-          <div class="product1-info-tittle"><h1>Product1 Name</h1></div>
-          <div class="product1-info-description">
-            a Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos soluta perspiciatis officia quia sit
-            corrupti Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci nisi nemo sequi quaerat fugiat debitis
-            labore aut amet Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur deleniti recusandae voluptatem,
-            accusamus, ipsam at odit expedita provident quasi vero adipisci itaque corrupti voluptas numquam ad cupiditate minima.
-            Quasi, itaque.
-          </div>
+          <div class="product1-info-tittle"><h1 data-product="titleH1"></h1></div>
+          <div data-product="description" class="product1-info-description"></div>
           <div class="product1-info-review">
-            <div class="product1-star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+            <div data-product="rating" class="product1-star">
             </div>
             <span> (23 Reviews)</span>
           </div>
@@ -93,6 +83,7 @@
         </div>
         <div></div>
       </div>
+    </template>
     </main>
 
     <footer class="footer">
@@ -161,6 +152,28 @@
           heartIcon.classList.toggle("hearted1");
         });
       });
+
+
+        // The product from json
+        async function getProducts() {
+        let sHeader = window.location.href;
+        let pageNumber = sHeader.substring(sHeader.indexOf("?") + 1) - 1;
+        let myJson = await fetch("products.json");
+        aProducts = await myJson.json();
+        let temp = document.querySelector("[data-template]");
+        let dest = document.querySelector("#product1s");
+          let clone = temp.cloneNode(true).content;
+          clone.querySelector('[data-product="image"]').src = aProducts[pageNumber].image;
+          clone.querySelector('[data-product="title"]').textContent = aProducts[pageNumber].title;
+          clone.querySelector('[data-product="titleH1"]').textContent = aProducts[pageNumber].title;
+          clone.querySelector('[data-product="price"]').textContent = aProducts[pageNumber].price + " DKK";
+          clone.querySelector('[data-product="description"]').textContent = aProducts[pageNumber].description;
+          for (i = 0; i < aProducts[pageNumber].rating; i++) {
+            clone.querySelector('[data-product="rating"]').insertAdjacentHTML("afterbegin", '<i class="fas fa-star"></i>');
+          }
+          dest.appendChild(clone);
+        }
+        getProducts();
     </script>
   </body>
 </html>
