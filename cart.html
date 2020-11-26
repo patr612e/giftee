@@ -63,9 +63,12 @@
             <div class="product-2-row">
                 <div> <img src="https://source.unsplash.com/random" alt="product_image" /></div>
                 <div> Product Name 1</div>
-                <div> 20 DKK</div>
+                <div class='priceContainer'> 
+                  <span id='itemPriceValue'>25</span>
+                  <span> DKK</span>
+                </div>
                 <div> 
-                <select id="quantity" name="quantity">
+                <select onchange="getFinalPrice();" id="quantity" name="quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -76,28 +79,38 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select> </div>
-                <div> 20 DKK</div>
+                <div class='priceContainer'> 
+                  <span id=finalPrice> </span>
+                  <span>DKK</span>
+                  </div>
                 <div> <i class="fa fa-trash" aria-hidden="true"></i>
                 </div>
             </div>
             <div id='product-2-line'class="product-2-row">
-                <div> <img src="https://source.unsplash.com/random" alt="product_image" /></div>
-                <div> Product Name 1</div>
-                <div> 20 DKK</div>
-                <div> 
-                <select id="quantity" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select> </div>
-                <div> 20 DKK</div>
-                <div> <i class="fa fa-trash" aria-hidden="true"></i> </div>
+              <div> <img src="https://source.unsplash.com/random" alt="product_image" /></div>
+              <div> Product Name 1</div>
+              <div class='priceContainer'> 
+                <span id='itemPriceValue'>39</span>
+                <span> DKK</span>
+              </div>
+              <div> 
+              <select onchange="getFinalPrice();" id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+              </select> </div>
+              <div class='priceContainer'> 
+                <span id=finalPrice> </span>
+                <span>DKK</span>
+                </div>
+              <div> <i class="fa fa-trash" aria-hidden="true"></i>
+              </div>
             </div>
         </div>
         <div class="product-checkout">
@@ -185,6 +198,19 @@
       </div>
     </footer>
     <script>
+      
+      function getFinalPrice(){
+      let subTotalText = document.getElementById('itemPriceValue').textContent
+      let subTotalInt = parseInt(subTotalText)
+      let quantity = document.getElementById('quantity').value
+      let finalPriceInt = subTotalInt * quantity ;
+      let finalPrice = document.getElementById('finalPrice').innerHTML = finalPriceInt 
+      
+    }
+      
+    
+      
+
      const input = document.getElementById('input-container');
 
       input.addEventListener('focusin', (event) => {
