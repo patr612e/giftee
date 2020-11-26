@@ -52,48 +52,48 @@
               </header>
     <main id="wishlist-products">
         <h2>Here are your favourite items</h2>
-        <p>You can remove any item by clicking on the heart.</p>
+        <p>You can remove or edit your favourites items.</p>
         <div class="wishlist-products-grid">
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()" class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">100 DKK</div>
                 <div class="rating"></div>
             </div>
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()"class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">350 DKK</div>
                 <div class="rating"></div>
             </div>
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()" class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">500 DKK</div>
                 <div class="rating"></div>
             </div>
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()" class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">600 DKK</div>
                 <div class="rating"></div>
             </div>
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()" class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">275 DKK</div>
                 <div class="rating"></div>
             </div>
             <div class="wishlist-product">
-                <i class="fas wishlist-product-wish fa-heart"></i>
+                <i onclick="deleteProduct()"class="fas wishlist-product-wish fa-trash"></i>
                 <img src="https://source.unsplash.com/random" alt="wishlist-product_image" />
                 <div class="wishlist-product-name">Reclaimed Wood USA Wall Art</div>
-                <div class="wishlist-product-price">250 DKK</div>
+                <div class="wishlist-product-price">90 DKK</div>
                 <div class="rating"></div>
             </div>
         </div>
@@ -145,7 +145,15 @@
         </div>
     </footer>
 </body>
-
+  <script>
+    function deleteProduct (){
+      btnDelete = event.target;
+      btnDelete.parentNode.remove();
+    }
+   
+    
+    
+  </script>
 </html>
 
 </body>

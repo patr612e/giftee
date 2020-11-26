@@ -12,6 +12,8 @@
 @import url("/css/login.css");
 @import url("/css/cart.css");
 @import url("/css/wishlist.css");
+@import url("/css/rollingLetters.css");
+
 
 * {
   padding: 0;
