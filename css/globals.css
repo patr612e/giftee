@@ -35,7 +35,7 @@
   --input-color: black;
   --input-border-width: 1px;
   --input-border-color: black;
-  --input-focus-border-color:var(--purple);
+  --input-focus-border-color: var(--purple);
   --input-border-radius: 0px;
   --input-transition: border-color 0.15s ease;
   --input-disabled-bg: #eee;

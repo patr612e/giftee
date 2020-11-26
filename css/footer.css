@@ -1,22 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html,
-  body {
-    height: 100%;
-  }
-  
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    bottom: 0;
-    padding-bottom: 2vh;
-    width: 100%;          /* Footer height */
-    background: white;
-    text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -24,6 +8,28 @@ body {
   height: 100%;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding-bottom: 2vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#contact,
+#about,
+#follow {
+  max-width: 300px;
+  min-width: 200px;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 footer h3,
 p,
@@ -38,25 +44,28 @@ footer h3 {
   cursor: default;
 }
 
-footer p {
-  font-family: sans-serif;
-  font-weight: bold;
+footer p,
+.icons {
+  /* font-family: sans-serif; */
+  /* font-weight: bold; */
   cursor: pointer;
+  transition: 0.1s;
+  padding: 0.3rem 0;
 }
 
 footer p:hover {
-  font-family: sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  color: rgb(46, 46, 46);
+  /* font-family: sans-serif;
+  font-weight: bold; */
+  color: var(--black);
 }
 
 footer .color-bar {
-  width: 40%;
+  /* width: 40%;
   position: relative;
   left: 10vw;
-  right: 10vw;
-  padding: 0.9vh;
+  right: 10vw; */
+  height: 3px;
+  padding: 2vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -118,4 +127,17 @@ footer .fa-twitter-square {
 
 footer .fa-twitter-square:hover {
   color: #167bb9;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  #contact,
+  #about,
+  #follow {
+    width: 300px;
+    margin: 1rem 0;
+  }
 }
