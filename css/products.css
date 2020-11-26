@@ -180,7 +180,7 @@ input[type="range"]::-webkit-slider-thumb {
 .product {
   /* border: 2px solid black; */
   width: 100%;
-  font-weight: 200;
+  font-weight: var(--main-font-weight);
   text-align: center;
   cursor: pointer;
   transition: 0.1s;

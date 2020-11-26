@@ -19,7 +19,7 @@
 }
 #search-container form {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: var(--main-font-weight);
 }
 #search-container i {
   position: absolute;
@@ -44,7 +44,7 @@
   padding: 15px;
   background-color: white;
   border: 2px solid var(--purple);
-  font-weight: 700;
+  font-weight: var(--main-font-weight-bold);
   color: var(--purple);
 }
 
@@ -89,7 +89,7 @@
 }
 
 .slogan h2 {
-  font-weight: 200;
+  font-weight: var(--main-font-weight);
 }
 
 .slogan h1 {
@@ -98,5 +98,5 @@
 }
 
 .slogan h2 span {
-  font-weight: 500;
+  font-weight: var(--main-font-weight-bold);
 }

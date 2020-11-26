@@ -5,6 +5,8 @@
   --pink: #ffb3c1;
   --red: #fe5e54;
   --black: #141414;
+  --main-font-weight: 300;
+  --main-font-weight-bold: 500;
 
   /* Button */
   --button-padding-vertical: 0.375rem;
@@ -57,7 +59,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 200;
+  font-weight: var(--main-font-weight);
 }
 
 main {
