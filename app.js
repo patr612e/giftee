@@ -51,18 +51,22 @@ const removeTagsFromSearch = ()=>{
         aTags[aTags.length - 1].remove();
         search.style.paddingLeft = `${tagsContainer.offsetWidth}px`;
       }
-        // Call event.preventDefault() to stop the character before the cursor
-        // from being deleted. Remove this line if you don't want to do that.
-        // event.preventDefault();
     }
 });
 
 search.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13 && search.value.length > 0) {
+  if (event.keyCode === 32 && ! search.value.startsWith(" ")) {
     tagsContainer.insertAdjacentHTML('beforeend', `<button>${search.value}</button>`);
     search.style.paddingLeft = `${tagsContainer.offsetWidth}px`;
     search.value = '';
     // Cancel the default action, if needed
     event.preventDefault();
+  }
+});
+search.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    if(search.value.length > 0 || ! tagsContainer.innerHTML == ""){
+      window.location.href = "/product-page.html";
+    }
   }
 });
