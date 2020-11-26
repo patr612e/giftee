@@ -23,7 +23,9 @@
       </div>
       <nav>
         <ul>
-          <li class="logo"><a href="index.html">Giftee</a></li>
+          <li class="logo">
+            <!-- <a href="index.html">Giftee</a> -->
+          </li>
           <li class="icons">
             <a href="login.html">
               <i class="fas fa-user"></i>
@@ -53,34 +55,44 @@
     <section id="content">
       <!-- <h2>What to give? Here's how to find out.</h2> -->
       <div class="full-height">
-      <div id="search-container">
-        <div class="search-bar">
-          <form name="search" onsubmit="return false">
-            <div id="search-input-tags"></div>
-            <input type="text" class="search-input" autocorrect="off" autocomplete="off" placeholder="Search for the perfect gift ..." />
-            <i onclick="location.href='/product-page.html';" class="fas fa-search"></i>
-            <div class="search-label hidden"></div>
-          </form>
+        <div class="slogan">
+          <h1>Giftee</h1>
+          <h2>We have made it <span>simple</span> for you to find something special and unique for someone you care about</h2>
         </div>
-        <div class="search-tags">
-          <button onclick="addTagsToSearch()">Education</button>
-          <button onclick="addTagsToSearch()">Girlfriend</button>
-          <button onclick="addTagsToSearch()">Boys</button>
-          <button onclick="addTagsToSearch()">Wedding</button>
-          <button onclick="addTagsToSearch()">Birthday</button>
-          <button onclick="addTagsToSearch()">Education</button>
-          <button onclick="addTagsToSearch()">Girlfriend</button>
-          <button onclick="addTagsToSearch()">Boys</button>
-          <button onclick="addTagsToSearch()">Wedding</button>
-          <button onclick="addTagsToSearch()">Birthday</button>
-          <button onclick="addTagsToSearch()">Birthday</button>
-          <button onclick="addTagsToSearch()">Education</button>
-          <button onclick="addTagsToSearch()">Girlfriend</button>
-          <button onclick="addTagsToSearch()">Boys</button>
-          <button onclick="addTagsToSearch()">Wedding</button>
+        <div id="search-container">
+          <div class="search-bar">
+            <form name="search" onsubmit="return false">
+              <div id="search-input-tags"></div>
+              <input
+                type="text"
+                class="search-input"
+                autocorrect="off"
+                autocomplete="off"
+                placeholder="Search for the perfect gift ..."
+              />
+              <i onclick="location.href='/product-page.html';" class="fas fa-search"></i>
+              <div class="search-label hidden"></div>
+            </form>
+          </div>
+          <div class="search-tags">
+            <button onclick="addTagsToSearch()">Education</button>
+            <button onclick="addTagsToSearch()">Girlfriend</button>
+            <button onclick="addTagsToSearch()">Boys</button>
+            <button onclick="addTagsToSearch()">Wedding</button>
+            <button onclick="addTagsToSearch()">Birthday</button>
+            <button onclick="addTagsToSearch()">Education</button>
+            <button onclick="addTagsToSearch()">Girlfriend</button>
+            <button onclick="addTagsToSearch()">Boys</button>
+            <button onclick="addTagsToSearch()">Wedding</button>
+            <button onclick="addTagsToSearch()">Birthday</button>
+            <button onclick="addTagsToSearch()">Birthday</button>
+            <button onclick="addTagsToSearch()">Education</button>
+            <button onclick="addTagsToSearch()">Girlfriend</button>
+            <button onclick="addTagsToSearch()">Boys</button>
+            <button onclick="addTagsToSearch()">Wedding</button>
+          </div>
         </div>
       </div>
-    </div>
     </section>
     <script src="app.js"></script>
   </body>

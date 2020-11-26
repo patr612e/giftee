@@ -67,8 +67,8 @@ nav li.logo a {
 }
 
 nav ul li.logo {
-  justify-self: center;
-  grid-column: 2/3;
+  /* justify-self: center; */
+  grid-column: 1/2;
 }
 
 nav ul li.icons {
