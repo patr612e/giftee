@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/search_home.css" />
     <title>Giftee - Checkout</title>
   </head>
-  <body>
+  <body onload='price();'>
     <header>
       <div class="color-bar">
         <div class="purple"></div>
@@ -68,7 +68,7 @@
                   <span> DKK</span>
                 </div>
                 <div> 
-                <select onchange="getFinalPrice(event.target);" id="quantity" name="quantity">
+                <select onchange="getFinalPrice();" id="quantity" name="quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -90,11 +90,11 @@
               <div> <img src="https://source.unsplash.com/random" alt="product_image" /></div>
               <div> Product Name 1</div>
               <div class='priceContainer'> 
-                <span id='itemPriceValue'>39</span>
+                <span id='itemPriceValue2'>39</span>
                 <span> DKK</span>
               </div>
               <div> 
-              <select onchange="getFinalPrice();" id="quantity" name="quantity">
+              <select onchange="getFinalPrice2();" id="quantity2" name="quantity">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -106,7 +106,7 @@
                   <option value="9">9</option>
               </select> </div>
               <div class='priceContainer'> 
-                <span id=finalPrice>  </span>
+                <span id=finalPrice2>  </span>
                 <span>DKK</span>
                 </div>
               <div> <i class="fa fa-trash" aria-hidden="true"></i>
@@ -131,7 +131,7 @@
                  </div>
                  <div class="basket-item">
                     <div>Subtotal</div>
-                    <div><b>40 DKK</b> </div>
+                    <div id='subtotal'><b></b> </div>
                   </div>
                       <div class="basket-item">
                         <div>Shipping</div>
@@ -140,7 +140,7 @@
                       </div>
                     <div class="basket-item"> 
                       <div>Total</div>
-                    <div><b>40 DKK</b> </div>
+                    <div id='total-container'><b></b> </div>
                   </div>
             </div>
             <div class='checkout-button'><button> <i class="fas fa-shopping-cart"></i>
@@ -199,17 +199,52 @@
     </footer>
     <script>
       
+        
+      
+      function price(){
+      let subTotalText = document.getElementById('itemPriceValue').textContent
+      let subTotalInt = parseInt(subTotalText)
+      let finalPrice = document.getElementById('finalPrice').innerHTML = subTotalText 
+      let subTotalText2 = document.getElementById('itemPriceValue2').textContent
+      let subTotalInt2 = parseInt(subTotalText2)
+      let finalPrice2 = document.getElementById('finalPrice2').innerHTML = subTotalText2
+      let subTotal = document.getElementById('subtotal').innerHTML = subTotalInt + subTotalInt2 + " DKK"
+      let totalContainer = document.getElementById('total-container').innerHTML = subTotalInt2 + subTotalInt + " DKK" 
+      }
+  
+      function subTotalPrice(){
+      let subTotalText = document.getElementById('finalPrice').textContent
+      let subTotalInt = parseInt(subTotalText);
+      let subTotalText2 = document.getElementById('finalPrice2').textContent
+      let subTotalInt2 = parseInt(subTotalText2);
+      let subTotalContainer = document.getElementById('subtotal').innerHTML = subTotalInt2 + subTotalInt + " DKK" 
+      let totalContainer = document.getElementById('total-container').innerHTML = subTotalInt2 + subTotalInt + " DKK" 
+    }
+   
+
       function getFinalPrice(){
       let subTotalText = document.getElementById('itemPriceValue').textContent
       let subTotalInt = parseInt(subTotalText)
       let quantity = document.getElementById('quantity').value
       let finalPriceInt = subTotalInt * quantity ;
       let finalPrice = document.getElementById('finalPrice').innerHTML = finalPriceInt 
+      subTotalPrice()
       
     }
       
-    
+    function getFinalPrice2(){
+      let subTotalText = document.getElementById('itemPriceValue2').textContent
+      let subTotalInt = parseInt(subTotalText)
+      let quantity = document.getElementById('quantity2').value
+      let finalPriceInt = subTotalInt * quantity ;
+      let finalPrice = document.getElementById('finalPrice2').innerHTML = finalPriceInt 
+      subTotalPrice()
       
+    }
+
+    
+    
+
 
      const input = document.getElementById('input-container');
 
