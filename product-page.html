@@ -104,7 +104,7 @@
         <template data-template="product">
           <div class="product">
             <i class="fas product-wish fa-heart"></i>
-            <div class="product-info" onclick="location.href='/product-page-1.html';">
+            <div data-product="link" class="product-info">
               <img data-product="image" src="" alt="product_image" />
               <div data-product="title" class="product-name"></div>
               <div data-product="price" class="product-price"></div>
@@ -242,7 +242,9 @@
 
         let temp = document.querySelector("[data-template]");
         let dest = document.querySelector(".products-grid");
+        let productIndex = 0;
         aProducts.forEach(product => {
+          productIndex = productIndex + 1;
           let clone = temp.cloneNode(true).content;
           clone.querySelector('[data-product="image"]').src = product.image;
           clone.querySelector('[data-product="title"]').textContent = product.title;
@@ -250,6 +252,7 @@
           for (i = 0; i < product.rating; i++) {
             clone.querySelector('[data-product="rating"]').insertAdjacentHTML("afterbegin", '<i class="fas fa-star"></i>');
           }
+          clone.querySelector('[data-product="link"]').setAttribute('onclick',`location.href = "/product-page-1.html?${productIndex}";`);
           dest.appendChild(clone);
         });
 
