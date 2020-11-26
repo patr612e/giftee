@@ -21,7 +21,7 @@
   background-color: #fbfbfb;
   align-items: center;
   justify-items: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
 }
 
@@ -139,7 +139,7 @@
   color: inherit;
 }
 #total-container {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1100px) {
