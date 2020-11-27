@@ -2,17 +2,21 @@
  
   
   .word {
-    position:absolute;
-    font-size: 24px;
+    
+    text-align: center;
+    position: absolute;
+    font-size: 28px;
     width: 290px;
     opacity: 0;
+    top: 39.8%;
+    
+    justify-self: center;
+
   }
   
   .letter {
     display: inline-block;
     position: relative;
-    float: left;
-    left: 15px;;
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
   }
@@ -32,19 +36,19 @@
   }
   
   .wisteria {
-    color: #8e44ad;
+    color: #4100a7;
   }
   
   .belize {
-    color: #2980b9;
+    color: #00c9b8;
   }
   
   .pomegranate {
-    color: #c0392b;
+    color: #fcd200;
   }
   
   .green {
-    color: #16a085;
+    color:  #fe5e54;
   }
   
   .midnight {
