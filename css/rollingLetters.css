@@ -80,7 +80,7 @@
       text-align: center;
       position: absolute;
       font-size: 28px;
-      top: 366px;
+      top: 372px;
       justify-self: center;
   }
   }
@@ -90,7 +90,7 @@
     text-align: center;
     position: absolute;
     font-size: 28px;
-    top: 368px;
+    top: 374px;
     justify-self: center;
     }
   }
@@ -246,7 +246,7 @@ and (max-device-height: 1024px)  {
   text-align: center;
   position: absolute;
   font-size: 28px;
-  top: 207px;
+  top: 390px;
   justify-self: center;
 }}
 
