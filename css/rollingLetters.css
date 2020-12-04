@@ -250,6 +250,19 @@ and (max-device-height: 1024px)  {
   justify-self: center;
 }}
 
+
+/* Macbook Pro mediaqueries */
+
+@media only screen 
+and (min-device-width: 1280px) 
+and (max-device-width: 1280px)  { 
+  .word {
+  text-align: center;
+  position: absolute;
+  font-size: 28px;
+  top: 305px;
+  justify-self: center;
+}}
 /* iPad mediaquerie */
 /* @media only screen 
   and (min-device-width: 768px) 
@@ -278,9 +291,3 @@ and (max-device-height: 1024px)  {
   }
   } */
   
-/* 
-  <span class="word wisteria">special</span>
-  <span class="word belize">unique</span>
-  <span class="word pomegranate">original</span>
-  <span class="word green">lovely</span>
-  <span class="word midnight">extraordinary</span> */
