@@ -220,7 +220,7 @@
     text-align: center;
     position: absolute;
     font-size: 28px;
-    top: 207px;
+    top: 27.7%;
     justify-self: center;
 }}
 
@@ -233,7 +233,7 @@
     text-align: center;
     position: absolute;
     font-size: 28px;
-    top: 172px;
+    top: 25.7%;
     justify-self: center;
 }}
 
@@ -246,7 +246,7 @@ and (max-device-height: 1024px)  {
   text-align: center;
   position: absolute;
   font-size: 28px;
-  top: 390px;
+  top: 38%;
   justify-self: center;
 }}
 
@@ -260,7 +260,7 @@ and (max-device-width: 1280px)  {
   text-align: center;
   position: absolute;
   font-size: 28px;
-  top: 305px;
+  top: 38%;
   justify-self: center;
 }}
 /* iPad mediaquerie */
